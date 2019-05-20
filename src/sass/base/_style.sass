@@ -1,0 +1,429 @@
+*
+	box-sizing: border-box
+.page
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	width: 768px
+	margin: 0 auto
+
+	font-size: $fs-primary
+	font-family: $font-primary
+
+.header
+	width: 100%
+	&-wrapper
+		display: flex
+		flex-direction: row
+		justify-content: flex-end
+		align-items: flex-start
+		flex-wrap: wrap
+		width: 100%
+	&-sidebarBlock
+		min-width: 257px
+	&-mainBlock
+		width: calc(100% - 257px)
+.cart
+	display: flex
+	flex-direction: row
+	align-items: center
+	width: auto
+	max-height: 75px
+	height: 75px
+	margin-bottom: 10px
+	border-right: 1.2px solid #ccc
+	border-left: 1.2px solid #ccc
+	&-content
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		width: 155px
+		padding: 12px 18px 0 16px
+		img
+			width: 45px
+			min-width: 45px
+			height: 45px
+			margin-right: 3px
+	&-title
+		width: 100%
+		margin-bottom: 4px
+	&-textWrapper
+		padding: 5px 0 0
+	&-text
+		margin: 0
+		font-size: $fs-primary
+		font-family: $font-primary
+		color: rgba(85, 85, 85, 0.8)
+		&_count, &_total
+			font-family: $font-primary-bold
+	.buttons
+		margin-left: 18px
+		padding-right: 30px
+		.btn
+			color: #777777
+			&:first-child
+				margin-bottom: 6px
+
+.nav
+	width: 100%
+	height: 100%
+	border-left: 1px solid #fff
+	background: $gradien-menu
+	&-menu
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 33px
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			padding: 11px 12px 10px
+			border-right: 1px solid rgba(0, 0, 0, 0.7)
+			border-left: 1px solid rgba(255, 255, 255, 0.3)
+			&:first-child
+				border-left: none
+			&:last-child
+				border-right: none
+			a
+				font-family: $font-btn
+				font-size: $fs-menu
+				text-decoration: none
+				color: #fff
+				text-transform: uppercase
+				text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.53)
+.sidebar
+	display: flex 
+	flex-direction: column
+	width: 257px
+	min-width: 257px
+	height: 100%
+	left: 100px
+	&-nav
+		width: 100%
+		height: 33px
+		padding: 10px 0
+		background: $gradient-sidebar-sub
+	&-menu
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		padding: 0px
+		margin: 0
+		list-style: none
+		li
+			padding: 0 13px
+			border-left: 1px dashed #fff
+			&:first-child
+				border: none
+	&-list
+		display: flex
+		flex-wrap: wrap
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		height: auto
+		padding: 20px 20px
+		margin: 0 auto
+		list-style: none
+		li
+			position: relative
+			width: 48%
+			padding: 0 10px
+			a
+				display: flex
+				flex-direction: row
+				align-items: center
+				width: 100%
+				height: 100%
+				padding: 4.5px 0
+				color: $color-text-links	
+				font-family: $font-primary-bold
+				font-size: $fs-menu
+				text-decoration: none
+				border-bottom: 1px dashed #d7e6f8
+				img
+					position: absolute
+					left: 0
+					min-width: 6px
+					width: 6px
+	.item
+		&-header
+			background: $gradient-sidebar
+.slide
+	position: relative
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	width: 100%
+	margin-bottom: 1px
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		z-index: 1
+	&-content
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		width: 51%
+		padding: 36px 20px 20px 0
+		z-index: 2
+	&-title
+		margin: 0 0 2px
+		font-weight: normal
+		font-family: $font-btn
+		font-size: 17.5px
+		letter-spacing: -0.5px
+		line-height: 0.5
+		text-transform: uppercase
+		color: #ffffff
+		opacity: 0.7
+	&-subtitle
+		margin: 0
+		font-family: $font-btn
+		text-transform: uppercase
+		color: #ffffff
+		font-size: 9.5px
+		letter-spacing: -1px
+	&-text
+		margin: 12px 0 0
+		color: #ffffff
+		font-size: 10px
+		opacity: 0.7
+	.btn
+		margin: 16px 0 0
+	&.big
+		.slide
+			&-title
+				font-size: 22px
+			&-subtitle
+				font-size: 12px
+.btn
+	display: flex
+	flex-direction: row
+	align-items: center
+	color: #ffffff
+	font-family: $font-btn
+	font-size: $fs-btn
+	text-transform: uppercase
+	letter-spacing: -1px
+	text-decoration: none
+	&:hover
+		img
+			box-shadow: 0 2px 2px 2px rgba(0,0,0, .1)
+	&:active
+		img
+				box-shadow: 0 2px 3px 2px rgba(0,0,0, .3)
+				transform: translate(1px) scale(0.95)
+	img
+		min-width: 21px
+		width: 21px
+		height: 21px
+		margin-right: 6px
+
+.buttons
+	display: flex
+	flex-direction: column
+	padding-left: 13px
+	border-left: 1px dashed #ccc
+
+.logo
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		height: 75px
+		margin-bottom: 10px
+		&-icon
+			min-width: 27px
+			width: 27px
+			height: 27px
+			margin-right: 8px
+			background-image: $gradient-logo 
+			border-radius: 25px
+		&-content
+			display: flex
+			flex-direction: column
+		&-title
+			margin: 0
+			font-size: $fs-logo
+			font-family: $font-header
+			text-transform: uppercase
+			color: $color-text-header
+			line-height: 0.8 
+			span
+				color: #8eb7d7
+		&-subtitle
+			margin: 0 0 1px
+			color: #8eb7d7
+			font-size: $fs-logo-sub
+			font-weight: 600
+			font-family: 6px
+			text-transform: uppercase
+			letter-spacing: -0.8px
+.title
+	margin: 0 7px 0 0
+	font-size: $fs-item-title
+	font-family: $font-header
+	color: $color-text-header
+	text-transform: uppercase
+.wrapper
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	flex-wrap: wrap
+	width: 100%
+	padding: 1px 0
+	&-content
+		width: calc(100% - 257px)
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+	&-bottom
+		display: flex
+		flex-direction: row
+		width: 100%
+		.item
+			width: 50%
+
+.item
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	width: 50%
+	&-header
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: center
+		width: 100%
+		max-height: 33px
+		padding: 14px 0 10px 17px
+		background: $gradient-item
+		border-width: 2px
+		border-style: solid
+		border-image: linear-gradient(to bottom, #c4dbf2, #f5f8fd) 5
+		box-shadow: $color-shadow-primary
+	&-share
+		position: relative
+		top: 2px
+		width: 16px
+		height: 16px	
+	&-wrapper
+		display: flex
+		flex-direction: row
+		width: 100%
+		height: calc(100% - 33px)
+		flex-wrap: wrap
+		padding: 10px 21px 14px 15px
+		border: 0.5px solid rgba(215, 230, 248, 0.3)
+	&-image
+		position: relative
+		width: 55%
+		height: 110px
+		margin-bottom: 12px
+		img
+			position: relative
+			max-height: 110px 
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%) 
+	&-price
+		display: flex 
+		align-items: center
+		width: 45%
+		padding-left: 14px
+		p.value
+			position: relative
+			margin: 0 
+			font-family: $font-primary
+			font-size: $fs-item-price
+			color: $color-item-price-value
+		span.subtitle
+			position: absolute
+			top: -7px
+			left: -4px
+			font-size: $fs-text
+			font-family: $font-btn
+			text-transform: uppercase
+			color: $color-item-price-title
+			transform: scale(0.7,1)
+	&-content
+		width: 55%
+		padding-right: 14px
+	&-title
+		margin: 0 
+		font-size: $fs-item-title
+		font-family: $font-primary-bold	
+		color: #99c12d
+	&-text
+		margin: 0
+		font-size: $fs-text
+		font-family: $font-primary	
+		color: $color-text
+	&_list
+		.item
+			&-list
+				width: 100%
+				height: 100%
+				padding: 11px 0 0
+				margin: 0 
+				list-style: none
+				li
+					width: 100%
+					a
+						display: flex
+						flex-direction: row
+						align-items: center
+						width: 100%
+						color: $color-text-links 
+						line-height: 2
+						img
+							min-width: 10px
+							width: 9px
+							height: 9px
+							margin-right: 6px
+	&_news
+		.news
+			&-list
+				width: 100%
+				height: 100%
+				margin: 0
+				padding: 11px 0 15px
+				list-style: none
+			&-item
+				padding: 8px 0 
+				border-bottom: 1px dashed #989696
+				&:last-child
+					border-bottom: none
+				&:first-child
+					padding-top: 0
+			&-date
+				margin: 0 0 2px
+				font-size: $fs-text
+				font-family: $font-primary-bold 
+				color: #99c12d
+			&-excerpt
+				margin: 0
+				font-size: $fs-text
+				font-family: $font-primary
+				color: #989696
+	.buttons
+		.btn
+			color: #777777
+			&:first-child
+				margin-bottom: 6px
+
+		
+
+
+

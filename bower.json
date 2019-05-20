@@ -1,0 +1,22 @@
+{
+  "name": "appBooster",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Lysenko K."
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "appBooster/node_modules/bower_components/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "jquery": "^3.3.1"
+  }
+}
