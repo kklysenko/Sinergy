@@ -1,0 +1,39 @@
+footer.footer
+	.container
+		.footer-item
+			p.item-title Меню
+			ul.item-list
+				+footer-link({text: 'Главная'})
+				+footer-link({text: 'О нас'})
+				+footer-link({text: 'Мероприятия и направления'})
+				+footer-link({text: 'Новости'})
+				+footer-link({text: 'Фотогалерея'})
+				+footer-link({text: 'Партнёры'})
+				+footer-link({text: 'Контакты'})
+				+footer-link({text: 'Карта сайта'})
+				+footer-link({text: 'Политика конфиденциальности'})
+		.footer-item
+			p.item-title Направления
+			ul.item-list
+				+footer-link({text: 'Мода и стиль'})
+				+footer-link({text: 'Красота и здоровье'})
+				+footer-link({text: 'Финансовая грамотность'})
+				+footer-link({text: 'Театр и выставки'})
+				+footer-link({text: 'Творчество'})
+				+footer-link({text: 'Поездки и экскурсии'})
+		.footer-item
+			p.item-title Контакты
+			.contacts
+				p.contacts-adress г. Самара, Московское шоссе 41, 7 этаж, офис 710
+				ul.contacts-list
+					li
+						a(href='tel:+78469906103') +7(846)990-61-03
+					li
+						a(href='tel:+79276080929') +7(927)608-09-29
+					li
+						a(href='tel:+79272606103') +7(927)260-61-03
+				a(href='mailto:marswell@yandex.ru') marswell@yandex.ru
+			ul.
+		.footer-item
+			+logo
+			p.policy © 2010 -2018 АНО «ЦРТ «СИНЕРГИЯ»

@@ -1,21 +1,29 @@
 header.header
 	.header-bg
-	.header-logo
-		img(src="../../images/logo.png")
-		p Центр развития и творчества
-	.header-content
-		p.header-email marswell@yandex.ru
-		a.header-tel 
-			img(src="../../images/icons/call.png")
-			| +7 (846) 990-61-03  
-		nav.nav.nav_main
+	.container
+		+logo
+		.header-content
+			p.header-email marswell@yandex.ru
+			a.header-tel 
+				img(src="../../images/icons/call.png")
+				| +7 (846) 990-61-03  
+			nav.nav.nav_main
+				ul.nav-list
+					+nav-link({name: 'Главная', href: ''})
+					+nav-link({name: 'О нас', href: ''})
+					+nav-link({name: 'Мероприятия и направления', href: ''})
+					+nav-link({name: 'Новости', href: ''})
+					+nav-link({name: 'Фотогалерея', href: ''})
+					+nav-link({name: 'Партнёры', href: ''})
+					+nav-link({name: 'Контакты', href: ''})
+section.section.section_submenu
+	.container
+		nav.nav.nav_sub
 			ul.nav-list
-				+nav-link({name: 'Главная', href: ''})
-				+nav-link({name: 'О нас', href: ''})
-				+nav-link({name: 'Мероприятия и направления', href: ''})
-				+nav-link({name: 'Новости', href: ''})
-				+nav-link({name: 'Фотогалерея', href: ''})
-				+nav-link({name: 'Партнёры', href: ''})
-				+nav-link({name: 'Контакты', href: ''})
-
+				+nav-link({name: 'Мода и стиль', href: ''})
+				+nav-link({name: 'Красота и здоровье', href: ''})
+				+nav-link({name: 'Поездки и экскурсии', href: ''})
+				+nav-link({name: 'Творчество', href: ''})
+				+nav-link({name: 'Театр и выставки', href: ''})
+				+nav-link({name: 'Финансовая грамотность', href: ''})
 

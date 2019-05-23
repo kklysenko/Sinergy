@@ -1,0 +1,55 @@
+section.section.section_breadcrumbs
+	.container
+		.breadcrumbs
+			ul.nreadcrumbs-list
+				li 
+					img(src="../../images/icons/home.png")
+					a Главная
+				li
+					a Направления
+section.section.section_main
+	.container
+		.main
+			h1.title Направления
+			p.text Образование и хобби играют важнейшие роли в жизни человека.
+			p.text Сегодня без постоянного самообразования сложно добиться успехов в работе, карьере, получить достойное качество жизни.
+			ul.benefits
+				+benefit({bgPrimary: '../../images/img_1.jpg', href: '', src: '../../images/icons/benefit_1.png', text: 'Мода и стиль'})
+				+benefit({bgPrimary: '../../images/img_2.jpg', href: '', src: '../../images/icons/benefit_2.png', text: 'Красота и здоровье'})
+				+benefit({bgPrimary: '../../images/img_3.jpg', href: '', src: '../../images/icons/benefit_3.png', text: 'Финансовая грамотность'})
+				+benefit({bgPrimary: '../../images/img_4.jpg', href: '', src: '../../images/icons/benefit_4.png', text: 'Театр и выставки'})
+				+benefit({bgPrimary: '../../images/img_5.jpg', href: '', src: '../../images/icons/benefit_5.png', text: 'Творчество'})
+				+benefit({bgPrimary: '../../images/img_6.jpg', href: '', src: '../../images/icons/benefit_6.png', text: 'Поездки и экскурсии'})
+section.section.section_request
+	.container
+		.order
+			img(class="order-image", src="../../images/fam.png")
+			.incut
+				h2.incut-title Консультация
+				p.incut-subtitle По любому направлению для детей и взрослых
+				img(src="../../images/icons/arrow_rght.png")
+			p.order-title
+				img(src="../../images/icons/comments.png")
+				| Оставьте заявку на консультацию
+			.order-window
+				label.order-label Как к Вам обращаться: 
+					span *
+				input(type="text")
+				label.order-label Номер телефона: 
+					span *
+				input(type="tel")
+				label.order-label Направление: 
+					span *
+				input(type="text")
+				button(type="submit")
+					img(src="../../images/icons/pen.png", alt="")
+					| Записаться 
+section.section.section_map
+	.map-bg
+	.map
+		.container
+			.map-content
+				p.map-title
+					img(src="../../images/icons/pointer.png") 
+					| Наш адрес
+				p.map-adress г. Самара, Московское шоссе 41, 7 этаж, офис 710

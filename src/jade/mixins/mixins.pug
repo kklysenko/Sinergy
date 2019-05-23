@@ -2,75 +2,21 @@ mixin nav-link(data)
 	li.nav-link
 		a(href= data.href)= data.name
 
-mixin btn(data)
-	a.btn(href= data.href, class= data.class)
-		img(src= data.src)
-		| #{data.name}
+mixin logo
+	.logo
+			img(src="../../images/logo.png")
+			p Центр развития и творчества
 
-mixin sidebar-link(data)
-	li.sidebar-link
-		a
-			img(src= data.src)
-
-mixin sidebar-category(data)
+mixin benefit(data)
 	li
 		a(href= data.href)
-			img(src='../../../src/images/icons/right-arrow.svg')
-			| #{data.name} 
+			.benefit-bg(style='background-image: url(../../../../src/images/'+data.bgPrimary+');')
+			.benefit-content
+				.benefit-contentBg(style='background-image: url(../../../../images/icons/bg_1.png));')
+				img.benefit-icon(src= data.src)
+				p.benefit-text= data.text
 
-mixin sidebar-slide(data)
-	.slide(class= data.class)
-		.slide-bg(style='background-image: url(../../../../src/images/'+data.bg+');')
-		.slide-content
-			h2.slide-title= data.title
-			p.slide-subtitle= data.subtitle
-			if data.text 
-				p.slide-text= data.text
-			if data.btnName
-				+btn({href: '#', class: ''+data.btnClass+'', name: ''+data.btnName+'', src: ''+data.btnSrc+''})
-
-mixin item-header(data)
-	.item-header
-		p.item-name.title= data.name
-		img.item-share(src= data.src)
-
-mixin item-ulLink(data)
+mixin footer-link(data)
 	li
-		a(href= data.href)
-			img(src='../../../src/images/icons/btn_more_green.png')
-			| #{data.name}
+		a= data.text
 
-mixin news-item(data)
-	li.news-item
-		a.news-date= data.date
-		p.news-excerpt= data.text
-
-mixin item(data)
-	if data.src 
-		.item
-			+item-header({name: 'Featured product', src: '../../../src/images/icons/share_green.png'})
-			.item-wrapper
-				.item-image
-					img(src= data.src)
-				.item-price
-					p.value $#{data.price}
-						span.subtitle Price
-				.item-content
-					h4.item-title= data.title
-					p.item-text= data.text
-				.buttons
-					+btn({href: '', name: 'More info', class: 'primary', src: '../../../src/images/icons/more_search_green.png'})
-					+btn({href: '', name: 'add to cart', class: 'secondary', src: '../../../src/images/icons/cart_blue.png'})
-	else if data.class === 'item_list'
-		.item(class= data.class)
-			+item-header({name: data.headerName, src: '../../../src/images/icons/share_green.png'})
-			.item-wrapper
-				ul.item-list
-					block list
-	else if data.class === 'item_news'
-		.item(class= data.class)
-			+item-header({name: data.headerName, src: '../../../src/images/icons/share_green.png'})
-			.item-wrapper
-				ul.news-list
-					block news
-					
